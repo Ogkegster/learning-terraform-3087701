@@ -18,18 +18,17 @@ variable "ami_filter" {
 }
 
 variable "environment" {
-  descriptipon = "Development Environment"
+  description = "Development Environment"
   type = object ({
     name = string
     network_prefix = string
   })
-}
 
   default = {
   name = "dev"
   network+prefix = "10.0"
+  }
 }
-
 
 variable "asg_min_size" {
   description = "Minimum number of instances in the ASG"
